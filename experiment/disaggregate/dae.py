@@ -74,7 +74,7 @@ class DAE(Disaggregator):
             filepath = 'dae-temp-weights-' + str(random.randint(0, 100000)) + '.h5'
             checkpoint = ModelCheckpoint(filepath, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
             train_x, v_x, train_y, v_y = train_test_split(train_main, power, test_size=.15, random_state=10)
-            model.fit(train_x, train_y, validation_data=[v_x, v_y], epochs=self.n_epochs, callbacks=[checkpoint],
+            model.fit(train_x, train_y, validation_data=(v_x, v_y), epochs=self.n_epochs, callbacks=[checkpoint],
                       shuffle=True, batch_size=self.batch_size)
             model.load_weights(filepath)
 

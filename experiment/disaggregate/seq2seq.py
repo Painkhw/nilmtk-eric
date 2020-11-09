@@ -88,7 +88,7 @@ class Seq2Seq(Disaggregator):
                     filepath = 'seq2seq-temp-weights-'+str(random.randint(0,100000))+'.h5'
                     checkpoint = ModelCheckpoint(filepath,monitor='val_loss',verbose=1,save_best_only=True,mode='min')
                     train_x, v_x, train_y, v_y = train_test_split(train_main, power, test_size=.15,random_state=10)
-                    model.fit(train_x,train_y,validation_data=[v_x,v_y],epochs=self.n_epochs,callbacks=[checkpoint],batch_size=self.batch_size)
+                    model.fit(train_x,train_y,validation_data=(v_x,v_y),epochs=self.n_epochs,callbacks=[checkpoint],batch_size=self.batch_size)
                     model.load_weights(filepath)
         if self.save_model_path:
             self.save_model()
