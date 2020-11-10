@@ -43,7 +43,7 @@ ex_train_microwave = {
     },
     'sample_rate': 6,
 
-    'appliances': ['microwave'],
+    'appliances': ['microwave',],
     'methods': method,
     'isState': False,
     'train': {
