@@ -4,7 +4,7 @@ from disaggregate import ADAE, DAE, Seq2Point, Seq2Seq, WindowGRU, RNN
 import warnings
 warnings.filterwarnings("ignore")
 
-path = '/home/eric/Project/NILMproj/Exam/nilmtk-dl-master/redd_low_freq.h5'
+path = '/home/eric/Project/data/redd_low_freq.h5'
 
 debug = False
 test = False
@@ -19,11 +19,11 @@ if(debug):
     }
 else:
     method = {
-       #'DAE': DAE({'save-model-path': 'DAE', 'pretrained-model-path': None}),
+        'DAE': DAE({'save-model-path': 'DAE', 'pretrained-model-path': None}),
         'RNN': RNN({'save-model-path': 'RNN', 'pretrained-model-path': None}),
         'Seq2Point': Seq2Point({'save-model-path': 'Seq2Point', 'pretrained-model-path': None}),
-       # 'Seq2Seq': Seq2Seq({'save-model-path': 'Seq2Seq', 'pretrained-model-path': None}),
-       # 'GRU': WindowGRU({'save-model-path': 'GRU', 'pretrained-model-path': None}),
+        'Seq2Seq': Seq2Seq({'save-model-path': 'Seq2Seq', 'pretrained-model-path': None}),
+        'GRU': WindowGRU({'save-model-path': 'GRU', 'pretrained-model-path': None}),
     }
 if test:
     method = {
