@@ -1,3 +1,4 @@
+from __future__ import print_function, division
 import itertools
 from copy import deepcopy
 from collections import OrderedDict
@@ -13,6 +14,15 @@ from nilmtk.disaggregate import Disaggregator
 from nilmtk.datastore import HDFDataStore
 import datetime
 import matplotlib.pyplot as plt
+# Python 2/3 compatibility
+from six import iteritems, iterkeys
+from builtins import range
+
+SEED = 42
+
+# Fix the seed for repeatibility of experiments
+np.random.seed(SEED)
+
 
 def sort_startprob(mapping, startprob):
     """ Sort the startprob according to power means; as returned by mapping
@@ -84,7 +94,7 @@ def compute_means_fhmm(list_means):
     -------
     [mu, cov]
     """
-    states_combination = list(itertools.product(*list_means))
+    states_combination = list(itertools.product(*list_means)) 
     num_combinations = len(states_combination)
     means_stacked = np.array([sum(x) for x in states_combination])
     means = np.reshape(means_stacked, (num_combinations, 1))
@@ -98,7 +108,7 @@ def compute_pi_fhmm(list_pi):
     -----------
     list_pi : List of PI's of individual learnt HMMs
 
-    Returns
+    Returns                                                                                                         。
     -------
     result : Combined Pi for the FHMM
     """
@@ -167,7 +177,7 @@ def decode_hmm(length_sequence, centroids, appliance_list, states):
     return [hmm_states, hmm_power]
 
 
-class FHMMExact(Disaggregator):
+class FHMM_EXACT(Disaggregator):
 
     def __init__(self,params):
         self.model = {}
@@ -289,7 +299,7 @@ class FHMMExact(Disaggregator):
 
                 # Model
                 means = OrderedDict()
-                for elec_meter, model in self.individual.items():
+                for elec_meter, model in iteritems(self.individual):
                     means[elec_meter] = (
                         model.means_.round().astype(int).flatten().tolist())
                     means[elec_meter].sort()
