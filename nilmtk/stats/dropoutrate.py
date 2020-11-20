@@ -1,7 +1,7 @@
 import numpy as np
-from ..node import Node
-from ..exceptions import TooFewSamplesError
-from ..utils import get_index 
+from nilmtk.node import Node
+from nilmtk.exceptions import TooFewSamplesError
+from nilmtk.utils import get_index 
 from .dropoutrateresults import DropoutRateResults
 
 class DropoutRate(Node):

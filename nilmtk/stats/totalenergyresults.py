@@ -1,5 +1,5 @@
-from ..results import Results
-from ..measurement import AC_TYPES
+from nilmtk.results import Results
+from nilmtk.measurement import AC_TYPES
 import pandas as pd
 
 class TotalEnergyResults(Results):

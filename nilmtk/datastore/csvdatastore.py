@@ -13,9 +13,9 @@ from nilm_metadata.convert_yaml_to_hdf5 import _load_file
 from nilmtk.timeframe import TimeFrame
 from nilmtk.timeframegroup import TimeFrameGroup
 from nilmtk.node import Node
-from nilmtk.datastore import DataStore, MAX_MEM_ALLOWANCE_IN_BYTES
-from nilmtk.datastore.key import Key
-from nilmtk.datastore.datastore import write_yaml_to_file, join_key
+from .datastore import DataStore, MAX_MEM_ALLOWANCE_IN_BYTES
+from .key import Key
+from .datastore import write_yaml_to_file, join_key
 from nilmtk.docinherit import doc_inherit
 
 class CSVDataStore(DataStore):

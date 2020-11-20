@@ -1,4 +1,4 @@
-from nilmtk.disaggregate import Disaggregator
+from .disaggregator import Disaggregator
 from .dae import DAE
 from .dsc import DSC
 from .afhmm import AFHMM
@@ -8,4 +8,4 @@ from .seq2seq import Seq2Seq
 from .WindowGRU import WindowGRU
 from .rnn import RNN
 from .mean import Mean
-#from .util import get_activations, config, get_sections_df, get_sections_df_2
+from .hwutil import get_activations, config, get_sections_df, get_sections_df_2

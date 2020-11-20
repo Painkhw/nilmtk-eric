@@ -2,10 +2,10 @@ import numpy as np
 from numpy import diff, concatenate
 import gc
 from .goodsectionsresults import GoodSectionsResults
-from ..timeframe import TimeFrame
-from ..utils import timedelta64_to_secs
-from ..node import Node
-from ..timeframe import list_of_timeframes_from_list_of_dicts, timeframe_from_dict
+from nilmtk.timeframe import TimeFrame
+from nilmtk.utils import timedelta64_to_secs
+from nilmtk.node import Node
+from nilmtk.timeframe import list_of_timeframes_from_list_of_dicts, timeframe_from_dict
 
 
 class GoodSections(Node):
