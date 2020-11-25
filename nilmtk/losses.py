@@ -1,4 +1,4 @@
-from sklearn.metrics import mean_squared_error, mean_absolute_error, f1_score, r2_score
+from sklearn.metrics import mean_squared_error, mean_absolute_error, f1_score, r2_score, accuracy_score, recall_score
 import numpy as np
 
 def mae(app_gt,app_pred):
@@ -15,6 +15,15 @@ def f1score(app_gt, app_pred):
     pred_temp = np.where(pred_temp<threshold,0,1)
 
     return f1_score(gt_temp, pred_temp)
+
+def accuracy(app_gt, app_pred):
+    return accuracy_score(app_gt, app_pred)
+
+def precision(app_gt, app_pred):
+    pass
+
+def recall(app_gt, app_pred):
+    pass
 
 def relative_error(app_gt,app_pred):
     constant = 1

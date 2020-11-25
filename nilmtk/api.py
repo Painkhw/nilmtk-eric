@@ -1,7 +1,7 @@
 from nilmtk.dataset import DataSet
 from nilmtk.metergroup import MeterGroup
 import pandas as pd
-from nilmtk.losses import *
+from .losses import *
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime

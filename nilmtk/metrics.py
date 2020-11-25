@@ -42,7 +42,6 @@ from .metergroup import MeterGroup
 from .metergroup import iterate_through_submeters_of_two_metergroups
 from .electric import align_two_meters
 
-
 def error_in_assigned_energy(predictions, ground_truth):
     """Compute error in assigned energy.
 
@@ -185,6 +184,7 @@ def rms_error_power(predictions, ground_truth):
         error[pred_meter.instance()] = math.sqrt(sum_of_squared_diff / n_samples)
 
     return pd.Series(error)
+
 
 
 def f1_score(predictions, ground_truth):
