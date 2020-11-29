@@ -94,8 +94,7 @@ def fraction_energy_assigned_correctly(predictions, ground_truth):
     fraction : float in the range [0,1]
         Fraction of Energy Correctly Assigned.
     '''
-
-
+    
     predictions_submeters = MeterGroup(meters=predictions.submeters().meters)
     ground_truth_submeters = MeterGroup(meters=ground_truth.submeters().meters)
 
@@ -184,8 +183,6 @@ def rms_error_power(predictions, ground_truth):
         error[pred_meter.instance()] = math.sqrt(sum_of_squared_diff / n_samples)
 
     return pd.Series(error)
-
-
 
 def f1_score(predictions, ground_truth):
     '''Compute F1 scores.
