@@ -1,6 +1,6 @@
 from warnings import warn
-from nilmtk.node import Node
-from nilmtk.utils import index_of_column_name
+from mynilmtk.node import Node
+from mynilmtk.utils import index_of_column_name
 
 class Clip(Node):
 

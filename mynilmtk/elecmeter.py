@@ -3,17 +3,17 @@ from collections import namedtuple
 from copy import deepcopy
 import numpy as np
 import pandas as pd
-from nilmtk.preprocessing import Clip
-from nilmtk.stats import TotalEnergy, GoodSections, DropoutRate
+from mynilmtk.preprocessing import Clip
+from mynilmtk.stats import TotalEnergy, GoodSections, DropoutRate
 from .hashable import Hashable
 from .measurement import (select_best_ac_type, PHYSICAL_QUANTITIES,
                           check_ac_type, check_physical_quantity)
 from .node import Node
 from .electric import Electric
-from nilmtk.exceptions import MeasurementError
+from mynilmtk.exceptions import MeasurementError
 from .utils import flatten_2d_list, capitalise_first_letter
 from .timeframegroup import TimeFrameGroup
-import nilmtk
+import mynilmtk
 
 ElecMeterID = namedtuple('ElecMeterID', ['instance', 'building', 'dataset'])
 
@@ -56,8 +56,8 @@ class ElecMeter(Hashable, Electric):
         # Insert self into nilmtk.global_meter_group
         if self.identifier is not None:
             assert isinstance(self.identifier, ElecMeterID)
-            if self not in nilmtk.global_meter_group.meters:
-                nilmtk.global_meter_group.meters.append(self)
+            if self not in mynilmtk.global_meter_group.meters:
+                mynilmtk.global_meter_group.meters.append(self)
 
     @property
     def key(self):

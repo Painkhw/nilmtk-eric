@@ -5,10 +5,10 @@ import numpy as np
 import pickle
 import copy
 
-from nilmtk.utils import find_nearest
-from nilmtk.feature_detectors import cluster
-from nilmtk.disaggregate import Disaggregator
-from nilmtk.datastore import HDFDataStore
+from mynilmtk.utils import find_nearest
+from mynilmtk.feature_detectors import cluster
+from mynilmtk.disaggregate import Disaggregator
+from mynilmtk.datastore import HDFDataStore
 
 
 class CO(Disaggregator):

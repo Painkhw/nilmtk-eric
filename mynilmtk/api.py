@@ -1,5 +1,5 @@
-from nilmtk.dataset import DataSet
-from nilmtk.metergroup import MeterGroup
+from mynilmtk.dataset import DataSet
+from mynilmtk.metergroup import MeterGroup
 import pandas as pd
 from .losses import *
 import numpy as np

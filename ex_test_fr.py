@@ -1,7 +1,7 @@
 
-from nilmtk.api import API
-from nilmtk.disaggregate import Mean
-from nilmtk.disaggregate import DAE, Seq2Point, Seq2Seq, WindowGRU, RNN
+from mynilmtk.api import API
+from mynilmtk.disaggregate import Mean
+from mynilmtk.disaggregate import DAE, Seq2Point, Seq2Seq, WindowGRU, RNN
 import warnings
 warnings.filterwarnings("ignore")
 

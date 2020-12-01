@@ -1,7 +1,7 @@
 from __future__ import print_function, division
 from warnings import warn
 
-from nilmtk.disaggregate import Disaggregator
+from mynilmtk.disaggregate import Disaggregator
 from keras.layers import Conv1D, Dense, Dropout, Reshape, Flatten
 
 import os

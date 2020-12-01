@@ -1,6 +1,6 @@
 from __future__ import print_function, division
 from warnings import warn
-from nilmtk.disaggregate import Disaggregator
+from mynilmtk.disaggregate import Disaggregator
 import pandas as pd
 import numpy as np
 from collections import OrderedDict 

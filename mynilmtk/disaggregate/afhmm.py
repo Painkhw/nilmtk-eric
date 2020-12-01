@@ -4,7 +4,7 @@ from warnings import warn
 import pandas as pd
 import numpy as np
 
-from nilmtk.disaggregate import Disaggregator
+from mynilmtk.disaggregate import Disaggregator
 from hmmlearn import hmm
 from collections import OrderedDict
 

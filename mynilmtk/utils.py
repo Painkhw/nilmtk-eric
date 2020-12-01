@@ -12,7 +12,7 @@ import networkx as nx
 from IPython.core.display import HTML, display
 from sklearn.metrics import mean_squared_error
 
-from nilmtk.datastore import HDFDataStore, CSVDataStore
+from mynilmtk.datastore import HDFDataStore, CSVDataStore
 
 def show_versions():
     """Prints versions of various dependencies"""

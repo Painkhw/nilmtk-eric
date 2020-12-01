@@ -5,10 +5,10 @@ import warnings
 import numpy as np
 import pandas as pd
 
-from nilmtk.timeframe import TimeFrame
-from nilmtk.timeframegroup import TimeFrameGroup
+from mynilmtk.timeframe import TimeFrame
+from mynilmtk.timeframegroup import TimeFrameGroup
 from .datastore import DataStore, MAX_MEM_ALLOWANCE_IN_BYTES
-from nilmtk.docinherit import doc_inherit
+from mynilmtk.docinherit import doc_inherit
 
 class HDFDataStore(DataStore):
 

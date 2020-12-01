@@ -18,10 +18,10 @@ from keras.utils import plot_model
 from sklearn.model_selection import train_test_split
 from keras.callbacks import ModelCheckpoint
 import keras.backend as K
-from nilmtk.utils import find_nearest
-from nilmtk.feature_detectors import cluster
-from nilmtk.disaggregate import Disaggregator
-from nilmtk.datastore import HDFDataStore
+from mynilmtk.utils import find_nearest
+from mynilmtk.feature_detectors import cluster
+from mynilmtk.disaggregate import Disaggregator
+from mynilmtk.datastore import HDFDataStore
 
 import random
 random.seed(10)

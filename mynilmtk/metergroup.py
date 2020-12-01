@@ -17,7 +17,7 @@ from matplotlib import MatplotlibDeprecationWarning
 # NILMTK imports
 from .elecmeter import ElecMeter, ElecMeterID
 from .appliance import Appliance
-from nilmtk.datastore import *
+from mynilmtk.datastore import *
 from .utils import (tree_root, nodes_adjacent_to_root, simplest_type_for,
                     flatten_2d_list, convert_to_timestamp, normalise_timestamp,
                     print_on_line, convert_to_list, append_or_extend_list,

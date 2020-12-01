@@ -20,9 +20,9 @@ from .utils import (offset_alias_to_seconds, convert_to_timestamp,
                     flatten_2d_list, append_or_extend_list,
                     timedelta64_to_secs, safe_resample)
 from .plots import plot_series
-from nilmtk.preprocessing import Apply
-from nilmtk.stats.histogram import histogram_from_generator
-from nilmtk.appliance import DEFAULT_ON_POWER_THRESHOLD
+from mynilmtk.preprocessing import Apply
+from mynilmtk.stats.histogram import histogram_from_generator
+from mynilmtk.appliance import DEFAULT_ON_POWER_THRESHOLD
 
 MAX_SIZE_ENTROPY = 10000
 

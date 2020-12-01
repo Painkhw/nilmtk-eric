@@ -10,13 +10,13 @@ from os import listdir, makedirs, remove
 from shutil import rmtree
 import re
 from nilm_metadata.convert_yaml_to_hdf5 import _load_file
-from nilmtk.timeframe import TimeFrame
-from nilmtk.timeframegroup import TimeFrameGroup
-from nilmtk.node import Node
+from mynilmtk.timeframe import TimeFrame
+from mynilmtk.timeframegroup import TimeFrameGroup
+from mynilmtk.node import Node
 from .datastore import DataStore, MAX_MEM_ALLOWANCE_IN_BYTES
 from .key import Key
 from .datastore import write_yaml_to_file, join_key
-from nilmtk.docinherit import doc_inherit
+from mynilmtk.docinherit import doc_inherit
 
 class CSVDataStore(DataStore):
 

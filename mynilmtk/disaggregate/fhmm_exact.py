@@ -9,9 +9,9 @@ import pandas as pd
 import numpy as np
 from hmmlearn import hmm
 
-from nilmtk.feature_detectors import cluster
-from nilmtk.disaggregate import Disaggregator
-from nilmtk.datastore import HDFDataStore
+from mynilmtk.feature_detectors import cluster
+from mynilmtk.disaggregate import Disaggregator
+from mynilmtk.datastore import HDFDataStore
 import datetime
 import matplotlib.pyplot as plt
 # Python 2/3 compatibility
