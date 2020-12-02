@@ -1,7 +1,7 @@
-
 from mynilmtk.api import API
 from mynilmtk.disaggregate import Mean
 from mynilmtk.disaggregate import DAE, Seq2Point, Seq2Seq, WindowGRU, RNN
+from mynilmtk.losses import accuracy, f1score, precision, recall, mae, rmse
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -15,11 +15,11 @@ test = {
     'sample_rate': 60,
     'appliances': ['fridge'],
     'methods': {
-        #'WindowGRU':WindowGRU({'n_epochs':10,'batch_size':256}),
-        #'RNN':RNN({'n_epochs':10,'batch_size':256}),
-        #'DAE':DAE({'n_epochs':10,'batch_size':256}),
-        'Seq2Point':Seq2Point({'n_epochs':10,'batch_size':256}),
-        'Seq2Seq':Seq2Seq({'n_epochs':10,'batch_size':256}),
+        'WindowGRU':WindowGRU({'n_epochs':50,'batch_size':256}),
+        'RNN':RNN({'n_epochs':50,'batch_size':256}),
+        'DAE':DAE({'n_epochs':50,'batch_size':256}),
+        'Seq2Point':Seq2Point({'n_epochs':50,'batch_size':256}),
+        'Seq2Seq':Seq2Seq({'n_epochs':50,'batch_size':256}),
         'Mean': Mean({}),
     },
     'train': {    
@@ -51,7 +51,7 @@ test = {
                 }
             }
         },
-        'metrics':['mae']
+        'metrics':['mae','rmse','f1score','accuracy','precision']
     }
 }
 

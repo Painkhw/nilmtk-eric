@@ -54,7 +54,9 @@ class API():
         self.pre_trained = ['pre_trained']
         self.train_datasets_dict = params['train']['datasets']
         self.test_datasets_dict = params['test']['datasets']
+
         self.metrics = params['test']['metrics']
+        
         self.methods = params['methods']
         self.artificial_aggregate = params.get('artificial_aggregate',self.artificial_aggregate)
         self.chunk_size = params.get('chunk_size',self.chunk_size)
