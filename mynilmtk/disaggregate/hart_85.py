@@ -3,9 +3,9 @@ from collections import OrderedDict, deque
 import pandas as pd
 from sklearn.metrics import mean_squared_error
 import pickle
-from mynilmtk.feature_detectors.cluster import hart85_means_shift_cluster
-from mynilmtk.feature_detectors.steady_states import find_steady_states
-from mynilmtk.disaggregate import Disaggregator
+from nilmtk.feature_detectors.cluster import hart85_means_shift_cluster
+from nilmtk.feature_detectors.steady_states import find_steady_states
+from nilmtk.disaggregate import Disaggregator
 
 class MyDeque(deque):
     def popmiddle(self, pos):

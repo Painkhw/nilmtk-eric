@@ -2,7 +2,7 @@ from warnings import warn
 import pandas as pd
 import numpy as np
 import json
-from mynilmtk.disaggregate import Disaggregator
+from nilmtk.disaggregate import Disaggregator
 import os
 
 class Mean(Disaggregator):

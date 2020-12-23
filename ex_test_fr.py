@@ -1,6 +1,6 @@
 from mynilmtk.api import API
-from mynilmtk.disaggregate import Mean
 from mynilmtk.disaggregate import DAE, Seq2Point, Seq2Seq, WindowGRU, RNN
+from mynilmtk.disaggregate import CO, DSC, AFHMM,AFHMM_SAC,FHMMExact,Mean,Hart85
 from mynilmtk.losses import accuracy, f1score, precision, recall, mae, rmse
 import warnings
 warnings.filterwarnings("ignore")
