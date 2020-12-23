@@ -12,31 +12,35 @@ experiment2 = {
   'sample_rate': 60,
   'appliances': ['fridge','air conditioner', 'microwave'],
   'methods': {"Mean":Mean({}),"FHMM_EXACT":FHMMExact({'num_of_states':2}), "CombinatorialOptimisation":CO({})},
-  'train': {    
-    'datasets': {
-        'Dataport': {
-            'path': 'data/dataport.hdf5',
-            'buildings': {
-                10: {
-                    'start_time': '2015-04-04',
-                    'end_time': '2015-04-06'
-                    }
-                }                
-            }
-        }
-    },
-  'test': {
-    'datasets': {
-        'Datport': {
-            'path': 'data/dataport.hdf5',
-            'buildings': {
-                10: {
-                    'start_time': '2015-04-25',
-                    'end_time': '2015-04-26'
+  'train': {
+        'datasets': {
+
+            'redd': {
+                'path': path,
+                'buildings': {
+                    1: {
+                        'start_time': '2011-04-18',
+                        'end_time': '2011-05-24'
                     }
                 }
             }
+        }
+    },
+
+    'test': {
+        'datasets': {
+            'redd': {
+                'path': path,
+                'buildings': {
+                    2: {
+                        'start_time': '2011-04-17',
+                        'end_time': '2011-04-22'
+                    },
+                }
+            }
         },
-        'metrics':['mae','rmse','f1score','accuracy','precision']
-    }
+         'metrics':['mae','rmse','f1score','accuracy','precision']
+    },
 }
+
+API(experiment2)
