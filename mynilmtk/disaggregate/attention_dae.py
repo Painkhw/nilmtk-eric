@@ -226,8 +226,6 @@ import random
 import json
 from .util import *
 
-
-
 random.seed(10)
 np.random.seed(10)
 
