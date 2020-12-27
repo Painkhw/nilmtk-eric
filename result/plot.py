@@ -31,20 +31,21 @@ plt.xticks(rotation=90)
 plt.show()
 '''
 
-from plotnine import *  ## 导入plotnine库
+import numpy as np
+import matplotlib.pyplot as plt
 
-## 绘制前加括号
-(
-    ggplot(data,aes(x='x',y='value',fill='product')) ## 数据对象
-    + geom_bar(stat='identity',width=0.5) ## 绘制柱状图的API
-    + theme(  ## 对绘图的表现进行调整
-            text = element_text(family = "SimHei"),  ## 设置黑体，可以显示中文
-            legend_direction ='horizontal',  ## 图例水平呈现
-            legend_title = element_blank(),  ## 图例标题不显示
-            legend_background = element_rect('none'),  ##  图例没有背景色
-            legend_position = (0.52,0.83),  ## 设置图例位置
-            figure_size = (9,5),  ##  画布的大小
-            axis_title_x = element_blank(),  ## X轴标题为空
-            axis_title_y = element_blank()  ## Y轴标题为空
-           )
-)
+size = 5
+x = np.arange(size)
+a = np.random.random(size)
+b = np.random.random(size)
+c = np.random.random(size)
+
+total_width, n = 0.8, 3
+width = total_width / n
+x = x - (total_width - width) / 2
+
+plt.bar(x, a,  width=width, label='a')
+plt.bar(x + width, b, width=width, label='b')
+plt.bar(x + 2 * width, c, width=width, label='c')
+plt.legend()
+plt.show()
