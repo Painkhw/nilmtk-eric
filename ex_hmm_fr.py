@@ -36,10 +36,10 @@ experiment2 = {
                         'start_time': '2011-04-17',
                         'end_time': '2011-04-22'
                     },
-                }
+                }       
             }
         },
-         'metrics':['mae','rmse','f1score','accuracy','precision']
+         'metrics':['mae','rmse','f1score','accuracy','precision','recall']
     },
 }
 
