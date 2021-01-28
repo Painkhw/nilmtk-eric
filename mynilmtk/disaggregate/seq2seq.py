@@ -27,8 +27,6 @@ class SequenceLengthError(Exception):
 class ApplianceNotFoundError(Exception):
     pass
 
-
-
 class Seq2Seq(Disaggregator):
 
     def __init__(self, params):
@@ -175,15 +173,13 @@ class Seq2Seq(Disaggregator):
                     print ("Parameters for ", app_name ," were not found!")
                     raise ApplianceNotFoundError()
 
-
                 processed_app_dfs = []
                 for app_df in app_df_lst:                    
                     new_app_readings = app_df.values.flatten()
                     new_app_readings = np.pad(new_app_readings, (units_to_pad,units_to_pad),'constant',constant_values = (0,0))
                     new_app_readings = np.array([new_app_readings[i:i + n] for i in range(len(new_app_readings) - n + 1)])                    
                     new_app_readings = (new_app_readings - app_mean) / app_std  # /self.max_val
-                    processed_app_dfs.append(pd.DataFrame(new_app_readings))
-                    
+                    processed_app_dfs.append(pd.DataFrame(new_app_readings))  
                     
                 appliance_list.append((app_name, processed_app_dfs))
                 #new_app_readings = np.array([ new_app_readings[i:i+n] for i in range(len(new_app_readings)-n+1) ])
