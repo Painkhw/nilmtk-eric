@@ -13,3 +13,8 @@ from .seq2seq import Seq2Seq
 from .WindowGRU import WindowGRU
 from .rnn import RNN
 from .dae import DAE
+
+from .seq2seqPReLU import Seq2SeqPReLU
+from .seq2seqLeakyReLU import Seq2SeqLeakyReLU
+from .WindowGRU_LN import WindowGRU_LN
+from .seq2seqEU import Seq2SeqELU

@@ -29,7 +29,7 @@ from nilmtk.exceptions import MeasurementError
 from .electric import Electric
 from .timeframe import TimeFrame, split_timeframes
 from nilmtk.preprocessing import Apply
-#from nilmtk.datastore import MAX_MEM_ALLOWANCE_IN_BYTES
+from nilmtk.datastore import MAX_MEM_ALLOWANCE_IN_BYTES
 from nilmtk.timeframegroup import TimeFrameGroup
 
 # MeterGroupID.meters is a tuple of ElecMeterIDs.  Order doesn't matter.
